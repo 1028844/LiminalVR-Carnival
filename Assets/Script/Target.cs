@@ -1,18 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
-public class Target : MonoBehaviour
+public class Target : MonoBehaviour, ITarget
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] UnityEvent hitEvent;
+
+    public void Hit()
     {
-        
+        hitEvent.Invoke();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DestroyTarget()
     {
-        
+        Destroy(gameObject);
     }
 }
