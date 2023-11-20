@@ -23,8 +23,9 @@ public class RandomSpawner : MonoBehaviour
         for (int i = 0; i < amountOfSpawns; i++)
         {
             int randomSpawnArea = Random.Range(0, spawnAreas.Length);
+            int randomTargetObj = Random.Range(0, targetObjects.Length);
 
-            GameObject newObj = Instantiate(targetObjects[0], Vector3.zero, targetObjects[0].transform.rotation);
+            GameObject newObj = Instantiate(targetObjects[randomTargetObj], Vector3.zero, targetObjects[randomTargetObj].transform.rotation);
             newObj.transform.parent = spawnAreas[randomSpawnArea].transform;
 
             PickRandomSpawn(newObj, randomSpawnArea);
