@@ -12,6 +12,6 @@ public class Target : MonoBehaviour, ITarget
 
     public void DestroyTarget()
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 }
