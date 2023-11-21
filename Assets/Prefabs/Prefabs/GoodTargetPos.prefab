@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1462698753446849022}
+  - component: {fileID: 3501250366027749669}
+  - component: {fileID: 8833307770099737988}
   m_Layer: 0
   m_Name: GoodTargetPos
   m_TagString: Untagged
@@ -31,6 +33,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3501250366027749669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859536195108803662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca9fe6434bb6a6409e715acec01e662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &8833307770099737988
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859536195108803662}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a683b4d373e9ee442aa7fb6d4aae0375, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6515856228967921872
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +156,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6515856228967921872}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.00416556, y: 0.0003131264, z: 0.006504023}
@@ -144,8 +177,8 @@ MonoBehaviour:
   hitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7237442013862841407}
-        m_MethodName: DestroyTarget
+      - m_Target: {fileID: 3501250366027749669}
+        m_MethodName: PlayAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -164,11 +197,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1462698753446849022}
     m_Modifications:
-    - target: {fileID: 1010524910830895950, guid: fe7709cb67c1fa54eacf42a3583c5fc4,
-        type: 3}
-      propertyPath: m_Name
-      value: GoodTarget
-      objectReference: {fileID: 0}
     - target: {fileID: 8650458095040534533, guid: fe7709cb67c1fa54eacf42a3583c5fc4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -233,6 +261,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 212.00024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010524910830895950, guid: fe7709cb67c1fa54eacf42a3583c5fc4,
+        type: 3}
+      propertyPath: m_Name
+      value: GoodTarget
+      objectReference: {fileID: 0}
+    - target: {fileID: 5354288631965844670, guid: fe7709cb67c1fa54eacf42a3583c5fc4,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866888448707002914, guid: fe7709cb67c1fa54eacf42a3583c5fc4,
+        type: 3}
+      propertyPath: hitEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866888448707002914, guid: fe7709cb67c1fa54eacf42a3583c5fc4,
+        type: 3}
+      propertyPath: hitEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866888448707002914, guid: fe7709cb67c1fa54eacf42a3583c5fc4,
+        type: 3}
+      propertyPath: hitEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe7709cb67c1fa54eacf42a3583c5fc4, type: 3}
