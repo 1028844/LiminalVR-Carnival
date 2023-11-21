@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class RandomSpawner : MonoBehaviour
 {
@@ -9,14 +8,6 @@ public class RandomSpawner : MonoBehaviour
     [SerializeField] List<Transform> objectPositions;
     [SerializeField] int amountOfSpawns;
     [SerializeField] Vector2 minGapBetweenSpawns;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            SpawnTargets();
-        }
-    }
 
     public void SpawnTargets()
     {
