@@ -7,6 +7,9 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.A)) transform.position = new Vector3(transform.position.x + (7.0f * Time.deltaTime), transform.position.y, transform.position.z);
+        if (Input.GetKey(KeyCode.D)) transform.position = new Vector3(transform.position.x - (7.0f * Time.deltaTime), transform.position.y, transform.position.z);
+
         if (Input.GetKeyDown(KeyCode.K))
         {
             Shoot();
