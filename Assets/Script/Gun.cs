@@ -25,6 +25,7 @@ public class Gun : MonoBehaviour
         if(hit.transform != null)
         {
             hit.transform.GetComponent<Target>().Hit();
+            Debug.Log(hit.transform.name);
         }
     }
 

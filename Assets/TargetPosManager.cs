@@ -14,8 +14,8 @@ public class TargetPosManager : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void PlayAnimation()
+    public void PlayAnimation(string animation)
     {
-        _animator.Play("TargetFlip");
+        _animator.Play(animation);
     }
 }
