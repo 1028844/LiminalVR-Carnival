@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.liminal.sdk": "https://github.com/LiminalVR/Liminal-SDK-Unity-Package.git#develop",
+    "com.liminal.sdk": "https://github.com/LiminalVR/Liminal-SDK-Unity-Package.git",
     "com.unity.ads": "2.0.8",
     "com.unity.analytics": "3.3.2",
     "com.unity.package-manager-ui": "2.1.2",
@@ -43,8 +43,8 @@
   },
   "lock": {
     "com.liminal.sdk": {
-      "hash": "f3d68e9ffc68f18dec4903f0622e7b7425c24152",
-      "revision": "develop"
+      "hash": "7abc5fd0ca6d6036f8187cbd4611c7628acae237",
+      "revision": "HEAD"
     }
   }
 }
