@@ -4,6 +4,7 @@ using UnityEngine.Events;
 public class Target : MonoBehaviour, ITarget
 {
     [SerializeField] UnityEvent hitEvent;
+    public int scoreReward = 1;
 
     public void Hit()
     {

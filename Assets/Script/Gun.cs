@@ -11,6 +11,8 @@ public class Gun : MonoBehaviour
     [SerializeField] Transform _barrel;
     [SerializeField] LayerMask _attackableLayers;
 
+    public int score = 0;
+
     private void Update()
     {
         var avatar = VRAvatar.Active;
@@ -58,7 +60,7 @@ public class Gun : MonoBehaviour
         if(hit.transform != null)
         {
             hit.transform.GetComponent<Target>().Hit();
-            Debug.Log(hit.transform.name);
+            score += hit.transform.GetComponent<Target>().scoreReward;
         }
     }
 }
