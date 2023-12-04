@@ -1,19 +1,52 @@
 ﻿using UnityEngine;
+using Liminal.Core.Fader;
+using Liminal.Platform.Experimental.App.Experiences;
+using Liminal.SDK.Core;
+using Liminal.SDK.VR;
+using Liminal.SDK.VR.Avatars;
+using Liminal.SDK.VR.Input;
 
 public class Gun : MonoBehaviour
 {
     [SerializeField] Transform _barrel;
     [SerializeField] LayerMask _attackableLayers;
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetKey(KeyCode.A)) transform.position = new Vector3(transform.position.x + (7.0f * Time.deltaTime), transform.position.y, transform.position.z);
-        if (Input.GetKey(KeyCode.D)) transform.position = new Vector3(transform.position.x - (7.0f * Time.deltaTime), transform.position.y, transform.position.z);
+        var avatar = VRAvatar.Active;
+        if (avatar == null)
+            return;
 
-        if (Input.GetKeyDown(KeyCode.K))
+        var rightInput = GetInput(VRInputDeviceHand.Right);
+        var leftInput = GetInput(VRInputDeviceHand.Left);
+
+        // Input Examples
+        if (rightInput != null)
         {
-            Shoot();
+            if (rightInput.GetButtonDown(VRButton.Back))
+                Debug.Log("Back button pressed");
+
+            if (rightInput.GetButtonDown(VRButton.One))
+                Shoot();
         }
+
+        if (leftInput != null)
+        {
+            if (leftInput.GetButtonDown(VRButton.Back))
+                Debug.Log("Back button pressed");
+
+            if (leftInput.GetButtonDown(VRButton.One))
+                Debug.Log("Trigger button pressed");
+        }
+
+        // Any input
+        // VRDevice.Device.GetButtonDown(VRButton.One);
+    }
+
+    private IVRInputDevice GetInput(VRInputDeviceHand hand)
+    {
+        var device = VRDevice.Device;
+        return hand == VRInputDeviceHand.Left ? device.SecondaryInputDevice : device.PrimaryInputDevice;
     }
 
     public void Shoot()
@@ -28,12 +61,4 @@ public class Gun : MonoBehaviour
             Debug.Log(hit.transform.name);
         }
     }
-
-    /*
-    bool triggerValue;
-    if (device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out triggerValue) && triggerValue)
-    {
-        Debug.Log("Trigger button is pressed.");
-    }
-    */
 }

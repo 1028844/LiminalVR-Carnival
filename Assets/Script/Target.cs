@@ -14,4 +14,14 @@ public class Target : MonoBehaviour, ITarget
     {
         Destroy(transform.parent.gameObject);
     }
+
+    public void DestroyGoodTarget()
+    {
+        RandomSpawner.goodTargets--;
+    }
+
+    public void DestroyBadTarget()
+    {
+        RandomSpawner.badTargets--;
+    }
 }

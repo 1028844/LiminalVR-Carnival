@@ -188,6 +188,17 @@ MonoBehaviour:
           m_StringArgument: TargetFlip
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7237442013862841407}
+        m_MethodName: DestroyGoodTarget
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1001 &2402391100703379579
@@ -275,7 +286,7 @@ PrefabInstance:
     - target: {fileID: 2866888448707002914, guid: fe7709cb67c1fa54eacf42a3583c5fc4,
         type: 3}
       propertyPath: hitEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2866888448707002914, guid: fe7709cb67c1fa54eacf42a3583c5fc4,
         type: 3}
@@ -296,6 +307,16 @@ PrefabInstance:
         type: 3}
       propertyPath: hitEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: TargetFlip
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866888448707002914, guid: fe7709cb67c1fa54eacf42a3583c5fc4,
+        type: 3}
+      propertyPath: hitEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DestroyGoodTarget
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866888448707002914, guid: fe7709cb67c1fa54eacf42a3583c5fc4,
+        type: 3}
+      propertyPath: hitEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe7709cb67c1fa54eacf42a3583c5fc4, type: 3}
