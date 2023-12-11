@@ -19,10 +19,12 @@ public class Target : MonoBehaviour, ITarget
     public void DestroyGoodTarget()
     {
         RandomSpawner.goodTargets--;
+        FindObjectOfType<AudioManager>().Play("Yay");
     }
 
     public void DestroyBadTarget()
     {
         RandomSpawner.badTargets--;
+        FindObjectOfType<AudioManager>().Play("Negative");
     }
 }
