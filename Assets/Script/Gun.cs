@@ -29,7 +29,6 @@ public class Gun : MonoBehaviour
                 Debug.Log("Back button pressed");
 
             if (rightInput.GetButtonDown(VRButton.One))
-            FindObjectOfType<AudioManager>().Play("Shoot");
                 Shoot();
         }
 
