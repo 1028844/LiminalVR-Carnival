@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 
 public class RandomSpawner : MonoBehaviour
 {
-    public static float TimeSet = 10f;
     [SerializeField] GameObject[] targetObjects;
     [SerializeField] SpawnArea[] spawnAreas;
     public List<GameObject> badTargetsObjs = new List<GameObject>();
@@ -59,7 +57,7 @@ public class RandomSpawner : MonoBehaviour
         newGoodTarget.transform.parent = spawnAreas[randomSpawnAreaS].transform;
 
         goodTargets++;
-        
+
         for (int i = 0; i < amountOfSpawns - 1; i++)
         {
             int randomSpawnArea = Random.Range(0, spawnAreas.Length);
@@ -67,7 +65,6 @@ public class RandomSpawner : MonoBehaviour
 
             GameObject newObj = Instantiate(targetObjects[randomTargetObj], Vector3.zero, targetObjects[randomTargetObj].transform.rotation);
             newObj.transform.parent = spawnAreas[randomSpawnArea].transform;
-            
 
             if (randomTargetObj == 0)
             {
