@@ -11,6 +11,7 @@ public class Gun : MonoBehaviour
     [SerializeField] Transform _barrel;
     [SerializeField] LayerMask _attackableLayers;
     [SerializeField] Animator gunAnimatorRH;
+    [SerializeField] bool leftHand = false;
 
     AudioSource _gunshotSound;
 
@@ -42,7 +43,7 @@ public class Gun : MonoBehaviour
                 Debug.Log("Back button pressed");
 
             if (rightInput.GetButtonDown(VRButton.One))
-                Shoot();
+                if (!leftHand) Shoot();
         }
 
         if (leftInput != null)
@@ -51,7 +52,7 @@ public class Gun : MonoBehaviour
                 Debug.Log("Back button pressed");
 
             if (leftInput.GetButtonDown(VRButton.One))
-                Debug.Log("Trigger button pressed");
+                if (leftHand) Shoot();
         }
 
         // Any input
