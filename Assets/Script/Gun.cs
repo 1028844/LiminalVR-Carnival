@@ -15,7 +15,7 @@ public class Gun : MonoBehaviour
 
     AudioSource _gunshotSound;
 
-    public int score = 0;
+    static public int score = 0;
 
     bool _ableToShoot = true;
     [SerializeField] float timeBeforeShoot = 0.5f;

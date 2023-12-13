@@ -4,7 +4,6 @@ using TMPro;
 public class ScoreUI : MonoBehaviour
 {
     TMP_Text text;
-    [SerializeField] Gun gun;
 
     private void Start()
     {
@@ -13,6 +12,6 @@ public class ScoreUI : MonoBehaviour
 
     void Update()
     {
-        text.text = gun.score.ToString();
+        text.text = Gun.score.ToString();
     }
 }
