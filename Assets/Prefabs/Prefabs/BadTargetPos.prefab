@@ -107,17 +107,6 @@ MonoBehaviour:
   hitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -1033792761335235448}
-        m_MethodName: PlayAnimation
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TargetFlip
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 6788742399578690755}
         m_MethodName: DestroyBadTarget
         m_Mode: 1
@@ -144,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5695382403474454551}
   - component: {fileID: -1033792761335235448}
-  - component: {fileID: 4248879570617751642}
   m_Layer: 0
   m_Name: BadTargetPos
   m_TagString: Untagged
@@ -179,22 +167,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca9fe6434bb6a6409e715acec01e662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &4248879570617751642
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5812796125875062183}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a683b4d373e9ee442aa7fb6d4aae0375, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

@@ -2651,6 +2651,11 @@ PrefabInstance:
       propertyPath: targetTime
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 7127232238307048275, guid: b8c4d6fd56aa1064bbd45007b4bf8b64,
+        type: 3}
+      propertyPath: minGapBetweenSpawns.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1007580968, guid: b8c4d6fd56aa1064bbd45007b4bf8b64, type: 3}
       propertyPath: spawnAreaZ
       value: 0
