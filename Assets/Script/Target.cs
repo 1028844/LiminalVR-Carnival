@@ -4,11 +4,13 @@ using UnityEngine.Events;
 public class Target : MonoBehaviour, ITarget
 {
     [SerializeField] UnityEvent hitEvent;
+    [SerializeField] GameObject hitSoundObj;
     public int scoreReward = 1;
 
     public void Hit()
     {
         hitEvent.Invoke();
+        CreateHitSound();
     }
 
     public void DestroyTarget()
@@ -24,5 +26,11 @@ public class Target : MonoBehaviour, ITarget
     public void DestroyBadTarget()
     {
         RandomSpawner.badTargets--;
+    }
+
+    void CreateHitSound()
+    {
+        GameObject newObj = Instantiate(hitSoundObj, transform.position, Quaternion.identity);
+        newObj.transform.parent = null;
     }
 }

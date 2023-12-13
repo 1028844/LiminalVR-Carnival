@@ -174,7 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8105bb401e82a4490860508e2b5d48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Time: 0
   hitEvent:
     m_PersistentCalls:
       m_Calls:
@@ -202,6 +201,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  hitSoundObj: {fileID: 1573625694510538359, guid: 29d3fdc66bbd56d4185b3872344b2b8f,
+    type: 3}
   scoreReward: 1
 --- !u!1001 &2402391100703379579
 PrefabInstance:

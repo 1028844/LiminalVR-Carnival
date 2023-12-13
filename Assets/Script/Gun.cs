@@ -10,8 +10,21 @@ public class Gun : MonoBehaviour
 {
     [SerializeField] Transform _barrel;
     [SerializeField] LayerMask _attackableLayers;
+    [SerializeField] Animator gunAnimatorRH;
+
+    AudioSource _gunshotSound;
 
     public int score = 0;
+
+    bool _ableToShoot = true;
+    [SerializeField] float timeBeforeShoot = 0.5f;
+    float _tempTimeBeforeShoot = 0.0f;
+
+    private void Start()
+    {
+        _gunshotSound = GetComponent<AudioSource>();
+        _tempTimeBeforeShoot = timeBeforeShoot;
+    }
 
     private void Update()
     {
@@ -43,6 +56,19 @@ public class Gun : MonoBehaviour
 
         // Any input
         // VRDevice.Device.GetButtonDown(VRButton.One);
+
+        if (!_ableToShoot)
+        {
+            if (_tempTimeBeforeShoot > 0)
+            {
+                _tempTimeBeforeShoot -= Time.deltaTime;
+            }
+            else
+            {
+                _ableToShoot = true;
+                _tempTimeBeforeShoot = timeBeforeShoot;
+            }
+        }
     }
 
     private IVRInputDevice GetInput(VRInputDeviceHand hand)
@@ -53,14 +79,21 @@ public class Gun : MonoBehaviour
 
     public void Shoot()
     {
+        if (!_ableToShoot) return;
+
         RaycastHit hit;
 
         Physics.Raycast(_barrel.transform.position, _barrel.forward, out hit, Mathf.Infinity, _attackableLayers);
+
+        _gunshotSound.Play();
+        gunAnimatorRH.Play("GunShoot");
 
         if(hit.transform != null)
         {
             hit.transform.GetComponent<Target>().Hit();
             score += hit.transform.GetComponent<Target>().scoreReward;
         }
+
+        _ableToShoot = false;
     }
 }
