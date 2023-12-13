@@ -56,6 +56,8 @@ public class RandomSpawner : MonoBehaviour
         GameObject newGoodTarget = Instantiate(targetObjects[0], Vector3.zero, targetObjects[0].transform.rotation);
         newGoodTarget.transform.parent = spawnAreas[randomSpawnAreaS].transform;
 
+        PickRandomSpawn(newGoodTarget, randomSpawnAreaS);
+
         goodTargets++;
 
         for (int i = 0; i < amountOfSpawns - 1; i++)
