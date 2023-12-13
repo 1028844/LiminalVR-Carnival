@@ -173,6 +173,7 @@ MonoBehaviour:
   hitSoundObj: {fileID: 1573625694510538359, guid: 29d3fdc66bbd56d4185b3872344b2b8f,
     type: 3}
   scoreReward: 1
+  movingTargetBounds: 1
 --- !u!1001 &2402391100703379579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -299,6 +300,11 @@ PrefabInstance:
         type: 3}
       propertyPath: hitEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: TargetFlip
+      objectReference: {fileID: 0}
+    - target: {fileID: 2866888448707002914, guid: fe7709cb67c1fa54eacf42a3583c5fc4,
+        type: 3}
+      propertyPath: movingTargetBounds
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe7709cb67c1fa54eacf42a3583c5fc4, type: 3}
