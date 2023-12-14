@@ -87,7 +87,7 @@ public class RandomSpawner : MonoBehaviour
         obj.transform.localPosition = new Vector3
         (
         Random.Range(-spawnAreas[randomSpawnArea].spawnAreaX, spawnAreas[randomSpawnArea].spawnAreaX),
-        0,
+        -5,
         Random.Range(-spawnAreas[randomSpawnArea].spawnAreaZ, spawnAreas[randomSpawnArea].spawnAreaZ)
         );
     }
@@ -99,7 +99,7 @@ public class RandomSpawner : MonoBehaviour
 
         foreach(GameObject obj in badTargetsObjs)
         {
-            Destroy(obj);
+            obj.GetComponent<Target>().DestroyTarget();
         }
 
         badTargetsObjs.Clear();

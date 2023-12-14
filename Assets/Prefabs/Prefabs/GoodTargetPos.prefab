@@ -170,7 +170,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  hitSoundObj: {fileID: 1573625694510538359, guid: 29d3fdc66bbd56d4185b3872344b2b8f,
+  hitSoundObj: {fileID: 6741724499433800781, guid: 4822fd8997d899b4cadd35bf4130dc7e,
     type: 3}
   scoreReward: 1
   movingTargetBounds: 1
