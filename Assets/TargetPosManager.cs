@@ -11,7 +11,7 @@ public class TargetPosManager : MonoBehaviour
 
     public void DestroyObj()
     {
-        Destroy(gameObject);
+        GetComponentInChildren<Target>().DestroyTarget();
     }
 
     public void PlayAnimation(string animation)
