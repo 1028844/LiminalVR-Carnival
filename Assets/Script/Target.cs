@@ -36,9 +36,10 @@ public class Target : MonoBehaviour, ITarget
     {
         if (_initialMove)
         {
-            if (transform.position.y <= _initialMovePosY) transform.position = new Vector3(transform.position.x, transform.position.y + (10 * Time.deltaTime), transform.position.z);
+            if (transform.position.y < _initialMovePosY) transform.position = new Vector3(transform.position.x, transform.position.y + (10 * Time.deltaTime), transform.position.z);
             else
             {
+                transform.position = new Vector3(transform.position.x, _initialMovePosY, transform.position.z);
                 GetComponent<Collider>().enabled = true;
                 _initialMove = false;
             }
