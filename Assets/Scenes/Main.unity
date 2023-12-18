@@ -5278,6 +5278,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NEW_gallery
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5ee3b36e1e2bfd44e8e5af00e8fc8383,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4525212452100835063, guid: 5ee3b36e1e2bfd44e8e5af00e8fc8383,
         type: 3}
       propertyPath: m_StaticEditorFlags

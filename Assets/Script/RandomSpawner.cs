@@ -99,7 +99,7 @@ public class RandomSpawner : MonoBehaviour
 
         foreach(GameObject obj in badTargetsObjs)
         {
-            obj.GetComponent<TargetPosManager>().DestroyObj();
+            if (obj != null) obj.GetComponent<TargetPosManager>().DestroyObj();
         }
 
         badTargetsObjs.Clear();
